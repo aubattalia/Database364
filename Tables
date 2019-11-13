@@ -7,3 +7,27 @@ ReturnDate Date not null,
 constraint RETURN_PK PRIMARY KEY (ReturnID),
 constraint RETURN_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
 );
+
+//* STORE TABLE
+Create TABLE STORE (
+StoreID char (25) not null,
+StoreName varchar (255),
+StoreAddress varchar2 (100),
+primary key (StoreID)
+);
+
+//* EMPLOYEE TABLE
+Create TABLE Employee (
+EmpID int not null,
+employeeFirstName varchar2 (25),
+employeeLastName varchar2 (25),
+primary key (EmpID)
+);
+
+//* SUPPLIER TABLE
+Create TABLE Supplier (
+SupplierID int not null,
+SupplierName varchar2 (25),
+SupplierEmail varchar2 (255),
+primary key (SupplierID)
+);
