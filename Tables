@@ -1,0 +1,9 @@
+create table RETURN
+(
+ReturnID CHAR(25) NOT NULL,
+ProductID CHAR(25) NOT NULL,
+ReturnReason VARCHAR2(25),
+ReturnDate Date not null,
+constraint RETURN_PK PRIMARY KEY (ReturnID),
+constraint RETURN_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
+);
