@@ -7,3 +7,66 @@ ReturnDate Date not null,
 constraint RETURN_PK PRIMARY KEY (ReturnID),
 constraint RETURN_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
 );
+
+//* WAREHOUSE
+create table WAREHOUSE(
+WareHouseID CHAR(25) NOT NULL,
+ProductID CHAR(25) NOT NULL,
+capacity VARCHAR2(25),
+constraint WAREHOUSE_PK PRIMARY KEY (WareHouseID),
+constraint WAREHOUSE_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
+);
+
+//* ORDER
+create table ORDER(
+OrderID CHAR(25) NOT NULL,
+WarehouseID CHAR(25) NOT NULL,
+ProductID CHAR(25) NOT NULL,
+SupplierID CHAR(25) NOT NULL,
+constraint ORDER_PK PRIMARY KEY (WareHouseID),
+constraint ORDER_FK FOREIGN KEY (WarehouseID) REFERENCES Product (WarehouseID)
+constraint ORDER_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
+constraint ORDER_FK FOREIGN KEY (SupplierID) REFERENCES Product (SupplierID)
+);
+
+//* TRANSPORTATION
+create table TRANSPORTATION(
+TransportID CHAR(25) NOT NULL,
+transportType CHAR(25) NOT NULL,
+constraint TRANSPORTATION_PK PRIMARY KEY (TransportID)
+);
+
+//* PRODUCT
+create table PRODUCT(
+ProductID CHAR(25) NOT NULL,
+ProductType VARCHAR2(25),
+ProductName VARCHAR2(25),
+constraint PRODUCT_PK PRIMARY KEY (ProductID)
+);
+
+
+//* PURCHASE
+create table PURCHASE(
+PurchID CHAR(25) NOT NULL,
+ProductID VARCHAR2(25) NOT NULL,
+PurchNumber VARCHAR2(25),
+PurchaseDate VARCHAR2(25),
+associate_ID VARCHAR2(25),
+constraint PURCHASE_PK PRIMARY KEY (PurchID)
+constraint PURCHASE_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
+);
+
+
+//* CUSTOMER
+create table CUSTOMER(
+CustID CHAR(25) NOT NULL,
+FirstName VARCHAR2(25),
+LastName VARCHAR2(25),
+Address VARCHAR2(255),
+Phone VARCHAR2(255),
+Email VARCHAR2(255),
+CreditCardTypeID VARCHAR2(25),
+constraint CUSTOMER_PK PRIMARY KEY (ProductID)
+);
+
+
