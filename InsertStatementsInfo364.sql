@@ -1,6 +1,8 @@
 --Purchase Insert Statements [PurchNo, PurchDate, PmtID, ProductID(FK), CustomerID(FK), EmpID(FK)]
 --[char(25) not null, date not null, char(25) not null, char(25) not null, char(25) not null, char(25) not null]
-
+insert into
+PURCHASE (PurchNo, PurchDate, PmtID, ProductID, CustomerID, EmpID)
+values(1001, 26.10.16, 90893, 875684, 10294853, 11112)
 
 --Customer Customer [CustID, CustFirst, CustLast, Address, CustPhone, CustEmail]
 --[char(25) not null, 
