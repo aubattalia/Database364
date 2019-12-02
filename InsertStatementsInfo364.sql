@@ -18,24 +18,11 @@ RETURN(ReturnID, ProductID, returnReason, returnDate)
 values(890438, 875684, 'My dog ate my sock', date '2008-11-10')
 
 
---Payment Payment [PmtID, pmtAmount, pmtType, pmtChargedDate]
-
-
-
---Payment_GC [GpmtID, Balance, GCardNumber]
-
-
-
---Payment_Cre [CpmtID, CCardNumber, CCardType]
-
-
-
---Payment-Deb [DpmtID, DCardNumber, DCardType]
-
-
-
---Payment_Cash [SpmtID, SChangeDueBack]
-
+--Payment [PmtID, pmtAmount, pmtType, pmtChargedDate]
+--[char(25), char(25), char(25), Date not null]
+INSERT INTO
+PAYMENT(PmtID, pmtAmount, pmtType, pmtChargedDate)
+values(10000000003, 4300, Credit, date '2008-11-08')
 
 
 --Product [ProductID, ProductType, ProductName]
@@ -52,13 +39,6 @@ values(78430, Men, Tshirt)
 INSERT INTO
 PRODUCT(ProductID, ProductType, ProductName)
 values(78458, Kids, Tshirt)
---Product_Women
-
---Product_Men
-
---Product_Kids
-
-
 
 --STORE  [StoreID, StoreName, StoreAddress]
 --[CHAR(25), VARCHAR2(255), VARCHAR2(100)]
