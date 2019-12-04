@@ -1,28 +1,27 @@
---Purchase Insert Statements [PurchNo, PurchDate, PmtID, ProductID(FK), CustomerID(FK), EmpID(FK)]
---[char(25) not null, date not null, char(25) not null, char(25) not null, char(25) not null, char(25) not null]
+--Purchase Insert Statements [PurchID, ProductID(FK), PurchNumber, PurchDate, Associate ID(FK)]
+--[char(25) not null, char(25) not null, char(25) not null, char(25) not null, date not null, char(25) not null]
 insert into
-PURCHASE (PurchNo, PurchDate, PmtID, ProductID, CustomerID, EmpID)
-values(1001, date '2008-11-08', 90893, 875684, 10294853, 11112)
+PURCHASE 
+values('1001', '78457', '1', date '2008-11-08',  '11112')
 
 --Customer Customer [CustID, CustFirst, CustLast, Address, CustPhone, CustEmail]
 --[char(25), varchar2(25), varchar2(25), varchar2(255), varchar2(255), varchar2(255),varchar2(25)]
 INSERT INTO
-CUSTOMER(CustID, CustFirst, CustLast, Address, CustPhone, CustEmail)
-values(10294853, Jimminy, Cricket, '780 Mellow Dr., Richmond VA, 23220', cricketemporium@makeawish.com)
+CUSTOMER values('10294853', 'Jimminy', 'Cricket', '780 Mellow Dr., Richmond VA, 23220', '8034557889', 'cricketemporium@makeawish.com', 'VISA')
 
 
 --RETURN [ReturnID, ProductID, returnReason, returnDate]
 --[char(25) not null,char(25), char(25), Date not null]
 insert into
 RETURN(ReturnID, ProductID, returnReason, returnDate)
-values(890438, 875684, 'My dog ate my sock', date '2008-11-10')
+values(890438, '78457', 'My dog ate my sock', date '2008-11-10')
 
 
 --Payment [PmtID, pmtAmount, pmtType, pmtChargedDate]
 --[char(25), char(25), char(25), Date not null]
 INSERT INTO
-PAYMENT(PmtID, pmtAmount, pmtType, pmtChargedDate)
-values(10000000003, 4300, Credit, date '2008-11-08')
+PAYMENT
+values('10000000003', '4300', 'Credit', date '2008-11-08')
 
 
 --Product [ProductID, ProductType, ProductName]
@@ -30,15 +29,15 @@ values(10000000003, 4300, Credit, date '2008-11-08')
 --Women
 INSERT INTO
 PRODUCT(ProductID, ProductType, ProductName)
-values(78457, Women, Tshirt)
+values('78457', 'Women', 'Tshirt')
 --Men
 INSERT INTO
 PRODUCT(ProductID, ProductType, ProductName)
-values(78430, Men, Tshirt)
+values('78430', 'Men', 'Tshirt')
 --Kids
 INSERT INTO
 PRODUCT(ProductID, ProductType, ProductName)
-values(78458, Kids, Tshirt)
+values('78458', 'Kids', 'Tshirt')
 
 --STORE  [StoreID, StoreName, StoreAddress]
 --[CHAR(25), VARCHAR2(255), VARCHAR2(100)]
@@ -78,6 +77,6 @@ values(675843, truck)
 --Order[OrderID, WarehouseID(FK), ProductID(FK), SupplierID(FK)]
 --[CHAR(25), CHAR(25), CHAR(25), CHAR(25)]
 INSERT INTO 
-ORDER(OrderID, WarehouseID, ProductID, SupplierID)
+ORDER(OrderID, WarehouseID, ProductID, Suppl)
 values(322228, 9001, 78457, 3)
 
