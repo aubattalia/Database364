@@ -42,15 +42,15 @@ constraint WAREHOUSE_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
 );
 
 //* ORDER
-create table ORDER(
+create table ORDERT(
 OrderID CHAR(25) NOT NULL,
 WarehouseID CHAR(25) NOT NULL,
 ProductID CHAR(25) NOT NULL,
 SupplierID CHAR(25) NOT NULL,
-constraint ORDER_PK PRIMARY KEY (WareHouseID),
-constraint ORDER_FK FOREIGN KEY (WarehouseID) REFERENCES Product (WarehouseID)
-constraint ORDER_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
-constraint ORDER_FK FOREIGN KEY (SupplierID) REFERENCES Product (SupplierID)
+constraint ORDERT_PK PRIMARY KEY (WareHouseID),
+constraint ORDERT_FK FOREIGN KEY (WarehouseID) REFERENCES Product (WarehouseID)
+constraint ORDERT_FK FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
+constraint ORDERT_FK FOREIGN KEY (SupplierID) REFERENCES Product (SupplierID)
 );
 
 //* TRANSPORTATION
