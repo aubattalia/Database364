@@ -9,6 +9,17 @@ values('1001', '78457', '1', date '2008-11-08',  '11112')
 INSERT INTO
 CUSTOMER values('10294853', 'Jimminy', 'Cricket', '780 Mellow Dr., Richmond VA, 23220', '8034557889', 'cricketemporium@makeawish.com', 'VISA')
 
+INSERT INTO
+CUSTOMER values('10294538', 'Joe', 'Schmo', '123 Any St., Richmond VA, 23221', '8045555555', 'SchmoJ@email.com', 'Mastercard')
+
+INSERT INTO
+CUSTOMER values ('10302345', 'Jane', 'Doe', '31 W Main St., Richmond VA, 23220', '8045555556', 'DoeJ@email.com', 'American Express')
+
+INSERT INTO
+CUSTOMER values ('10314567', 'Mike', 'Jordan', '23 B Ball Ct., Richmond VA, 23221', '8045555557', 'MagicMike@email.com', 'VISA')
+
+INSERT INTO
+CUSTOMER values ('10314568', 'Marty', 'McFly', '1980 Back In Time Dr., Richmond VA, 23220', '8045555558', '1BadDelorean@email.com', 'Mastercard')
 
 --RETURN [ReturnID, ProductID, returnReason, returnDate]
 --[char(25) not null,char(25), char(25), Date not null]
